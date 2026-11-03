@@ -315,17 +315,38 @@ section { padding: 6rem 2rem; }
   border-radius: var(--radius); padding: 1.8rem;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
               border-color 0.3s var(--ease), opacity 0.3s var(--ease);
-  text-decoration: none; color: inherit; display: block;
+  text-decoration: none; color: inherit; display: flex; flex-direction: column;
 }
 .portfolio-card:hover {
   transform: translateY(-4px); box-shadow: var(--shadow-md);
   border-color: var(--chip-border);
 }
-.portfolio-card.is-hidden, .writing-item.is-hidden { display: none; }
-.portfolio-logo { height: 32px; width: auto; max-width: 100%; margin-bottom: 0.8rem; object-fit: contain; object-position: left center; }
+.portfolio-card.is-hidden, .writing-item.is-hidden, .portfolio-subhead.is-hidden { display: none; }
+.portfolio-logo-slot {
+  height: 48px; display: flex; align-items: center; margin-bottom: 0.8rem;
+}
+.portfolio-logo { height: 32px; width: auto; max-width: 100%; object-fit: contain; object-position: left center; }
+.portfolio-logo--tall { height: 48px; }
+.portfolio-logo--on-dark {
+  background: #14161c; border-radius: 6px; padding: 6px 10px; height: 32px;
+}
+[data-theme="dark"] .portfolio-logo {
+  background: #fff; border-radius: 6px; padding: 4px 8px;
+}
+[data-theme="dark"] .portfolio-logo--on-dark { background: transparent; padding: 0; }
 .portfolio-card h4 {
   font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
   font-size: 1.1rem; color: var(--heading); margin-bottom: 0.3rem;
+}
+.portfolio-card-head {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+}
+.portfolio-card-head h4 { margin-bottom: 0.3rem; flex: 1 1 0; min-width: 0; }
+.portfolio-card-head .portfolio-badge { margin-left: auto; flex-shrink: 0; }
+.portfolio-subhead {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem;
+  font-weight: 700; color: var(--heading); margin: 3rem 0 0;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--border);
 }
 .portfolio-card .portfolio-desc {
   color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.5rem;
@@ -336,11 +357,11 @@ section { padding: 6rem 2rem; }
   border-radius: 4px; margin-right: 0.3rem; margin-bottom: 0.3rem;
 }
 [data-theme="dark"] .portfolio-tag { color: #a5a9ff; }
-.portfolio-stage { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; }
+.portfolio-stage { font-size: 0.8rem; color: var(--text-muted); margin-top: auto; padding-top: 0.5rem; }
 .portfolio-badge {
   display: inline-block; font-size: 0.66rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.6rem;
+  padding: 0.2rem 0.6rem; border-radius: 4px;
   background: var(--chip-bg); color: var(--primary-blue);
   border: 1px solid var(--chip-border);
 }

@@ -112,7 +112,7 @@
       });
     });
   }
-  setupFilter('[data-filter-bar="status"]', '.portfolio-card', 'data-status');
+  setupFilter('[data-filter-bar="status"]', '.portfolio-card, .portfolio-subhead', 'data-status');
   setupFilter('[data-filter-bar="source"]', '.writing-item', 'data-source');
 
   /* ---------- active nav link ---------- */
