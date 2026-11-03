@@ -114,6 +114,7 @@
   }
   setupFilter('[data-filter-bar="status"]', '.portfolio-card, .portfolio-subhead', 'data-status');
   setupFilter('[data-filter-bar="source"]', '.writing-item', 'data-source');
+  setupFilter('[data-filter-bar="type"]', '.video-card', 'data-type');
 
   /* ---------- active nav link ---------- */
   var sections = document.querySelectorAll('main section[id]');

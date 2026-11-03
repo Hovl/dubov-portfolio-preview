@@ -321,7 +321,7 @@ section { padding: 6rem 2rem; }
   transform: translateY(-4px); box-shadow: var(--shadow-md);
   border-color: var(--chip-border);
 }
-.portfolio-card.is-hidden, .writing-item.is-hidden, .portfolio-subhead.is-hidden { display: none; }
+.portfolio-card.is-hidden, .writing-item.is-hidden, .portfolio-subhead.is-hidden, .video-card.is-hidden { display: none; }
 .portfolio-logo-slot {
   height: 48px; display: flex; align-items: center; margin-bottom: 0.8rem;
 }
